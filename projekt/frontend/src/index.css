@@ -1,0 +1,52 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,400;0,700;1,300&display=swap");
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html {
+  background: #f1f1f1;
+}
+
+.error {
+  @apply text-pink-700 bg-pink-300 border border-pink-700 text-sm p-2 rounded-lg mt-2;
+}
+
+.hamburger {
+  position: relative;
+  width: 24px;
+  height: 24px;
+  cursor: pointer;
+}
+.hamburger-top,
+.hamburger-middle,
+.hamburger-bottom {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 24px;
+  height: 2px;
+  transform: rotate(0);
+  background: #fff;
+  transition: all 0.5s;
+}
+.hamburger-top {
+}
+.hamburger-middle {
+  transform: translateY(7px);
+}
+.hamburger-bottom {
+  transform: translateY(14px);
+}
+.open {
+  transform: rotate(90deg);
+}
+.open .hamburger-top {
+  transform: rotate(45deg) translateY(6px) translateX(6px);
+}
+.open .hamburger-middle {
+  display: none;
+}
+.open .hamburger-bottom {
+  transform: rotate(-45deg) translateY(6px) translateX(-6px);
+}
